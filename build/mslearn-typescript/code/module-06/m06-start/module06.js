@@ -33,4 +33,12 @@ cities.AddOrUpdate(11, "London"); // item not added
 console.log(cities.GetData(1)); // returns 'Chicago'
 console.log(cities.GetData(12)); // returns 'undefined'
 // TODO Test items as numbers.
-// TODO Test items as objects.
+let empIDs = new DataStore();
+empIDs.AddOrUpdate(0, 50);
+empIDs.AddOrUpdate(1, 65);
+empIDs.AddOrUpdate(2, 89);
+console.log(empIDs.GetData(0));
+let pets = new DataStore();
+pets.AddOrUpdate(0, { name: 'Rex', breed: 'Golden Retriever', age: 5 });
+pets.AddOrUpdate(1, { name: 'Sparky', breed: 'Jack Russell Terrier', age: 3 });
+console.log(pets.GetData(1)); // returns { name: 'Sparky', breed: 'Jack Russell Terrier', age: 3 }

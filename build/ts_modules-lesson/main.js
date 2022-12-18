@@ -23,12 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/*  Module 7: Working with external libraries
-    Lab Start */
-const LoanPrograms = __importStar(require("./module07_loan-programs.js"));
-/*  TODO Add the import statement. */
-/*  TODO Update the function calls. */
-let interestOnlyPayment = LoanPrograms.calculateInterestOnlyLoanPayment({ principle: 30000, interestRate: 5 });
-let conventionalLoanPayment = LoanPrograms.calculateConventionalLoanPayment({ principle: 30000, interestRate: 5, months: 180 });
-console.log(interestOnlyPayment); //* Returns "The interest only loan payment is 125.00" 
-console.log(conventionalLoanPayment); //* Returns "The conventional loan payment is 237.24"
+const greetings_module_js_1 = require("./greetings_module.js"); // imports a single function in the module
+const allGreetingFunctions = __importStar(require("./greetings_module.js")); // imports all exported components in the module
+const greetings_utilities_modules_js_1 = require("./greetings-utilities_modules.js");
+(0, greetings_module_js_1.returnGreeting)('Hola!'); // Displays 'The message from Greetings_module is Hola!'
+allGreetingFunctions.returnGreeting('Bonjour'); // Displays 'The message from Greetings_module is Bonjour!'
+(0, greetings_utilities_modules_js_1.returnGreeting)('Ciao!'); // Displays 'The message from GreetingsWithLength_module is Ciao! It is 5 characters long.'
